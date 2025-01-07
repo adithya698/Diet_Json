@@ -1,0 +1,3719 @@
+{
+	"info": {
+		"_postman_id": "48221a09-0316-40de-aaeb-771d08fbef32",
+		"name": "Diet Module",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39500048"
+	},
+	"item": [
+		{
+			"name": "Self Registration",
+			"item": [
+				{
+					"name": "registrationfileupload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageData",
+									"value": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAA",
+									"type": "text"
+								},
+								{
+									"key": "module_id\n",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "pathLocation\n",
+									"value": "REGISTRATION/",
+									"type": "text"
+								},
+								{
+									"key": "type\n",
+									"value": "regprofileimage",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/registrationfileupload",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"registrationfileupload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertcommonvender",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"p_vendor_typeid\": \"8\",\r\n    \"p_vendor_name\": \"Good Life\",\r\n    \"p_vedor_contact_number\": \"8855566886\",\r\n    \"p_ventdor_contact_email\": \"goodlife@bacot.in\",\r\n    \"p_vendor_since\": \"\",\r\n    \"p_person_name\": \"Good Life\",\r\n    \"p_person_contact_number\": \"8855566886\",\r\n    \"p_reg_number\": \"DN001\",\r\n    \"p_vendor_address\": \"Chennai\",\r\n    \"p_referral_code\": \"TOMSLM1\",\r\n    \"p_profile_path\": \"https://tom-diet.s3.me-south-1.amazonaws.com/STAGE/REGISTRATION/17331971153041733197115300.jpeg\",\r\n    \"p_document_path\": \"https://tom-diet.s3.me-south-1.amazonaws.com/STAGE/REGISTRATION/17331976408241733197640697.jpeg\",\r\n    \"p_vendor_latlong\": \"13.088578,80.195159\",\r\n    \"p_person_email\": \"goodlife@bacot.in\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/insertcommonvender",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"insertcommonvender"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "LoginWeb",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"goodlife@bacot.in\",\r\n    \"password\": \"qPGg5rBx6r\",\r\n    \"module\": \"diet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/getWalkinPaymentDetails",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"getWalkinPaymentDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot_password_check_mail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"goodlife@bacot.in\",\r\n    \"host\": \"diet.stage.theonemoment.co\",\r\n    \"pathname\": \"dietmodule\",\r\n    \"module\": \"diet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/forgot_password_check_mail",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"forgot_password_check_mail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check_nd_reset_password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"goodlife@bacot.in\",\r\n    \"uuid\": \"ca6f5706-472f-49be-a53e-76fdb519c265\",\r\n    \"password\": \"password\",\r\n    \"user_id\": \"556\",\r\n    \"host\": \"diet.stage.theonemoment.co\",\r\n    \"pathname\": \"dietmodule\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/check_nd_reset_password",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"check_nd_reset_password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contract Approval",
+			"item": [
+				{
+					"name": "getVendorContractWeb",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": 556\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/getVendorContractWeb",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"getVendorContractWeb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertvendorwebtoken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": 556,\r\n    \"token\": \"fn8Y_xtsUcqg7V3-mNSAVK:APA91bFSpn5NTTxcYPv9pOGOs-O8vQgrFLG8bz4wLJEyyPpe2qC6KTQfLLXe6bD_yzFGdLEwA3QwD10c7k568Z3T9bSAHfAurLY6EG_YM81utU6rQDgNkLI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/insertvendorwebtoken",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"insertvendorwebtoken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertvendorweblanguage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": 556,\r\n    \"language\": \"en\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/insertvendorweblanguage",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"insertvendorweblanguage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getvendorprofile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": 556\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/getvendorprofile",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"getvendorprofile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "decryptedContent_data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 556,\r\n    \"vendor_type\": \"Diet\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/decryptedContent_data",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"decryptedContent_data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "awsS3FileUpload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/adith/OneDrive/Desktop/Adithya/Images/Book a Room/pexels-catscoming-707581.jpg"
+								},
+								{
+									"key": "module_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "pathLocation",
+									"value": "SIGNATURE/",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/awsS3FileUpload",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"awsS3FileUpload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vendorContractApproval",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contract_id\": 541,\r\n    \"module_name\": \"Diet\",\r\n    \"signature_image\": \"https://tom-diet.s3.me-south-1.amazonaws.com/STAGE/SIGNATURE/1733199600740signature.png\",\r\n    \"vendor_id\": \"556\",\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZ29vZGxpZmVAYmFjb3QuaW4iLCJpYXQiOjE3MzMxOTg5OTgsImV4cCI6MTczMzE5OTA1OH0.a-FOuzch1tMgoJX6kQR5gwWRhORj6LBpwufcT0AuUTw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/vendorContractApproval",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"vendorContractApproval"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3 Step Registration",
+			"item": [
+				{
+					"name": "Dietdashboard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"556\",\r\n    \"from_date\": \"2024-12-03\",\r\n    \"to_date\": \"2024-12-03\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/Dietdashboard",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"Dietdashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getdietvendorprofile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"556\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getdietvendorprofile",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getdietvendorprofile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkContractValid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"556\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/checkContractValid",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"checkContractValid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyThreeStepVerification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"556\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/verifyThreeStepVerification",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"verifyThreeStepVerification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mediaupload_details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"556\",\r\n    \"limit\": 100,\r\n    \"pageno\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/mediaupload_details",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"mediaupload_details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCollateralVideosByVendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendorId\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/getCollateralVideosByVendor",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"getCollateralVideosByVendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateGoLiveStatus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"561\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/updateGoLiveStatus",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"updateGoLiveStatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Master Menu",
+			"item": [
+				{
+					"name": "getMasterMenus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"556\",\r\n    \"module\": \"Mastermenurepeat\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getMasterMenus",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getMasterMenus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMasterMenuItemList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"556\",\r\n    \"module\": \"MasterMenu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getMasterMenuItemList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getMasterMenuItemList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "awsS3FileUpload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "module_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/adith/OneDrive/Desktop/Adithya/Images/Book a Room/pexels-catscoming-707581.jpg"
+								},
+								{
+									"key": "pathLocation",
+									"value": "MASTER_MENU_PROFILE_UPLOAD/",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/awsS3FileUpload",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"awsS3FileUpload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveMasterMenuItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "item_id",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "imageArray",
+									"value": "https://tom-diet.s3.me-south-1.amazonaws.com/STAGE/MASTER_MENU_PROFILE_UPLOAD/1733202097441i-e-KRGFXJWIo2Y-unsplash.jpg",
+									"type": "text"
+								},
+								{
+									"key": "master_menu_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "item_name",
+									"value": "BR",
+									"type": "text"
+								},
+								{
+									"key": "calories",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "protein",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "crab",
+									"value": "45",
+									"type": "text"
+								},
+								{
+									"key": "fat",
+									"value": "75",
+									"type": "text"
+								},
+								{
+									"key": "available_dates",
+									"value": "10-12-2024,17-12-2024,11-12-2024,18-12-2024,12-12-2024,19-12-2024",
+									"type": "text"
+								},
+								{
+									"key": "vendor_id",
+									"value": "556",
+									"type": "text"
+								},
+								{
+									"key": "is_active",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/saveMasterMenuItem",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"saveMasterMenuItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMenuItemActiveStatus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"master_menu_id\": 1,\r\n    \"item_id\": 0,\r\n    \"is_active\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/updateMenuItemActiveStatus",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"updateMenuItemActiveStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMasterMenuItem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_id\": 695\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/deleteMasterMenuItem",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"deleteMasterMenuItem"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manage Package",
+			"item": [
+				{
+					"name": "getDietManagePackageList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"556\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getDietManagePackageList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getDietManagePackageList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMasterMenus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"556\",\r\n    \"module\": \"ManagePackage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getMasterMenus",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getMasterMenus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getManagePackageDropdownList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getManagePackageDropdownList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getManagePackageDropdownList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMasterMenuItemList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"556\",\r\n    \"module\": \"ManagePackage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getMasterMenuItemList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getMasterMenuItemList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDietPacakgeDetailsMenuList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail_id\": \"\",\r\n    \"package_id\": 0,\r\n    \"modulefrom\": \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getDietPacakgeDetailsMenuList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getDietPacakgeDetailsMenuList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "awsS3FileUpload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "module_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/adith/OneDrive/Desktop/Adithya/Images/Diet Image/dan-gold-4_jhDO54BYg-unsplash.jpg"
+								},
+								{
+									"key": "pathLocation",
+									"value": "MANAGE_PACKAGE_PROFILE_UPLOAD/",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/awsS3FileUpload",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"awsS3FileUpload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addNewDietPackageDetail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageArray",
+									"value": "https://tom-diet.s3.me-south-1.amazonaws.com/STAGE/MANAGE_PACKAGE_PROFILE_UPLOAD/1733240957333i-e-KRGFXJWIo2Y-unsplash.jpg\nvendor_id: 556\npackage_id: 0",
+									"type": "text"
+								},
+								{
+									"key": "vendor_id",
+									"value": "556",
+									"type": "text"
+								},
+								{
+									"key": "package_id",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "package_name",
+									"value": "Weight Loss",
+									"type": "text"
+								},
+								{
+									"key": "no_of_days",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "no_of_meals",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "no_of_snacks",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/addNewDietPackageDetail",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"addNewDietPackageDetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMenuitemDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"package_id\": 154\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getMenuitemDetails",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getMenuitemDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDietPackageDetailsListweb",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"duration_id\": 0,\r\n    \"vendor_id\": \"556\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getDietPackageDetailsListweb",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getDietPackageDetailsListweb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPackageDurationDetailsList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"package_id\": 154,\r\n    \"vendor_id\": \"556\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getPackageDurationDetailsList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getPackageDurationDetailsList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPackageGeneralDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"package_id\": 154,\r\n    \"from\": \"Activepackage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getPackageGeneralDetails",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getPackageGeneralDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkContractValid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"556\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/checkContractValid",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"checkContractValid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateDietPackageDetailStatus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/updateDietPackageDetailStatus",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"updateDietPackageDetailStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteDietPackageDetails",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail_id\": 318\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/deleteDietPackageDetails",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"deleteDietPackageDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDietMasterMenusmanagepackage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"556\",\r\n    \"module\": \"ManagePackage\",\r\n    \"meals\": 1,\r\n    \"snacks\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getDietMasterMenusmanagepackage",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getDietMasterMenusmanagepackage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveDietPackageMenuItems",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail_id\": 314,\r\n    \"menu_items\": [\r\n        {\r\n            \"master_menu_id\": 2,\r\n            \"menu_id\": 702,\r\n            \"order_no\": 1\r\n        }\r\n    ],\r\n    \"packageID\": 154\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/saveDietPackageMenuItems",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"saveDietPackageMenuItems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPackageGeneralDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"package_id\": 154,\r\n    \"from\": \"Activepackage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getPackageGeneralDetails",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getPackageGeneralDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveDietPackageInstructions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"package_id\": 154,\r\n    \"book_in_days\": 1,\r\n    \"is_cheat_day\": 1,\r\n    \"delivery_time\": [\r\n        {\r\n            \"from_time\": \"22:44\",\r\n            \"to_time\": \"23:44\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/saveDietPackageInstructions",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"saveDietPackageInstructions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePackageDurationDetails",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"duration_id\": 252\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/deletePackageDurationDetails",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"deletePackageDurationDetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "getFileSizeByModule",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contenttype\": \"Post\",\r\n    \"module_id\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/getFileSizeByModule",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"getFileSizeByModule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "awsS3FileUpload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "module_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/adith/OneDrive/Desktop/Adithya/Images/Diet Image/pexels-bulbfish-1143754.jpg"
+								},
+								{
+									"key": "pathLocation",
+									"value": "POST/",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/awsS3FileUpload",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"awsS3FileUpload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertMediaUpload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageArray",
+									"value": "https://tom-diet.s3.me-south-1.amazonaws.com/STAGE/POST/1733246501547i-e-KRGFXJWIo2Y-unsplash.jpg",
+									"type": "text"
+								},
+								{
+									"key": "thumbfile",
+									"type": "file",
+									"src": "/C:/Users/adith/OneDrive/Desktop/Adithya/Images/Diet Image/i-e-KRGFXJWIo2Y-unsplash.jpg"
+								},
+								{
+									"key": "imagename",
+									"value": "1733246501547i-e-KRGFXJWIo2Y-unsplash.jpg",
+									"type": "text"
+								},
+								{
+									"key": "mediatype",
+									"value": "Image",
+									"type": "text"
+								},
+								{
+									"key": "mediasortorder",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "mediavendorId",
+									"value": "556",
+									"type": "text"
+								},
+								{
+									"key": "activeflag",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "createdby",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "createdon",
+									"value": "2024-12-3 22:51:43",
+									"type": "text"
+								},
+								{
+									"key": "modifiedby",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "modifiedon",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ipaddress",
+									"value": "192.144.23",
+									"type": "text"
+								},
+								{
+									"key": "mediatitle",
+									"value": "Sample",
+									"type": "text"
+								},
+								{
+									"key": "isactive",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/insertMediaUpload",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"insertMediaUpload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editMediaUpload",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageArray",
+									"value": "https://tom-diet.s3.me-south-1.amazonaws.com/STAGE/POST/1733248027092i-e-KRGFXJWIo2Y-unsplash.jpg",
+									"type": "text"
+								},
+								{
+									"key": "thumbfile",
+									"value": "https://tom-diet.s3.me-south-1.amazonaws.com/STAGE/POST/1733248027092i-e-KRGFXJWIo2Y-unsplash.jpg",
+									"type": "text"
+								},
+								{
+									"key": "imagename",
+									"value": "1733248027092i-e-KRGFXJWIo2Y-unsplash.jpg",
+									"type": "text"
+								},
+								{
+									"key": "mediatype",
+									"value": "Image",
+									"type": "text"
+								},
+								{
+									"key": "mediasortorder",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "mediavendorId",
+									"value": "556",
+									"type": "text"
+								},
+								{
+									"key": "activeflag",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "createdby",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "createdon",
+									"value": "2024-12-3 23:17:8",
+									"type": "text"
+								},
+								{
+									"key": "modifiedby",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "modifiedon",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ipaddress",
+									"value": "192.144.23",
+									"type": "text"
+								},
+								{
+									"key": "mediatitle",
+									"value": "Sample",
+									"type": "text"
+								},
+								{
+									"key": "isactive",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "697",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/editMediaUpload",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"editMediaUpload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mediaSortOrder",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"556\",\r\n    \"sorting\": [\r\n        {\r\n            \"media_id\": 696,\r\n            \"sort_order\": 0\r\n        },\r\n        {\r\n            \"media_id\": 697,\r\n            \"sort_order\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/mediaSortOrder",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"mediaSortOrder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "getdietvendorprofile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"487\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getdietvendorprofile",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getdietvendorprofile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editdietvendorprofile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bank_name\": \"yuyuyuytttyyt\",\r\n    \"account_name\": \"uyuyuyuy\",\r\n    \"account_no\": \"76776666676\",\r\n    \"branch_area\": \"ggfgffgf\",\r\n    \"iban\": \"j88888\",\r\n    \"dietvendorId\": \"474\",\r\n    \"module\": \"diet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/editdietvendorprofile",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"editdietvendorprofile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCommissionDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"diet_vendor_id\": \"474\",\r\n    \"creditCard\": 1,\r\n    \"kNet\": 0,\r\n    \"applePay\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/diet/updateCommissionDetails",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"diet",
+								"updateCommissionDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "decryptedContent_data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"474\",\r\n    \"vendor_type\": \"Diet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/decryptedContent_data",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"decryptedContent_data"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Support",
+			"item": [
+				{
+					"name": "get_vendor_ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"474\",\r\n    \"limit\": 1000,\r\n    \"pageno\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/get_vendor_ticket",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"get_vendor_ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_vendor_ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image_files",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "audio_files",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "screen_name",
+									"value": "Completed Orders",
+									"type": "text"
+								},
+								{
+									"key": "remarks",
+									"value": "Sample test",
+									"type": "text"
+								},
+								{
+									"key": "booked_time",
+									"value": "0:39",
+									"type": "text"
+								},
+								{
+									"key": "module_name",
+									"value": "Diet",
+									"type": "text"
+								},
+								{
+									"key": "vendor_id",
+									"value": "474",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/add_vendor_ticket",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"add_vendor_ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_ticket_status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ticketId\": \"TOMAT903\",\r\n    \"status\": \"RO\",\r\n    \"module_name\": \"Diet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/update_ticket_status",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"update_ticket_status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Deal",
+			"item": [
+				{
+					"name": "getAddSlotsDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fromDate\": \"2024-12-01\",\r\n    \"toDate\": \"2024-12-31\",\r\n    \"vendor_type_id\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/diet/getAddSlotsDetails",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"diet",
+								"getAddSlotsDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveDealDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"474\",\r\n    \"deal_id\": 0,\r\n    \"package_id\": 139,\r\n    \"duration_days\": 5,\r\n    \"diet_detail_id\": 283,\r\n    \"deal_title\": \"Samm\",\r\n    \"deal_active\": 1,\r\n    \"from_date\": \"2024-12-11\",\r\n    \"to_date\": \"2024-12-11\",\r\n    \"deal_option\": \"Percentage\",\r\n    \"deal_value\": \"10\",\r\n    \"package_cost\": 500000,\r\n    \"deal_amount\": \"10\",\r\n    \"billing_amount\": \"450000.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/saveDealDetails",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"saveDealDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDealsList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"474\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getDealsList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getDealsList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Advertisement",
+			"item": [
+				{
+					"name": "get_mas_placement_location",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 2,\r\n        \"ad_location\": \"Category\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/get_mas_placement_location",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"get_mas_placement_location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_mas_size_master",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"size\": \"Half\"\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"size\": \"Full\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/get_mas_size_master",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"get_mas_size_master"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFileSizeByModule",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contenttype\": \"Advertisement\",\r\n    \"module_id\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/getFileSizeByModule",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"getFileSizeByModule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_ad_rate_vendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_type_id\": 8,\r\n    \"placement_location_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/get_ad_rate_vendor",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"get_ad_rate_vendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAddSlotsDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fromDate\": \"2024-12-01\",\r\n    \"toDate\": \"2024-12-31\",\r\n    \"placementLocation\": 2,\r\n    \"vendor_type_id\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/diet/getAddSlotsDetails",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"diet",
+								"getAddSlotsDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAd_Booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": \"487\",\r\n    \"limit\": 10,\r\n    \"pageno\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getAd_Booking",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getAd_Booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "awsS3FileUpload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "module_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/adith/OneDrive/Desktop/Adithya/Images/Diet Image/dan-gold-4_jhDO54BYg-unsplash.jpg"
+								},
+								{
+									"key": "pathLocation",
+									"value": "ADV/",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/awsS3FileUpload",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"awsS3FileUpload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editAdBooking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ad_id\": 686,\r\n    \"imageArray\": \"https://tom-diet.s3.me-south-1.amazonaws.com/STAGE/ADV/1733285548463i-e-KRGFXJWIo2Y-unsplash.jpg\",\r\n    \"imageArraythumb\": \"\",\r\n    \"startdate\": \"2025-04-01\",\r\n    \"enddate\": \"2025-04-01\",\r\n    \"type\": \"image/jpeg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/editAdBooking",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"editAdBooking"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tomorrow Preparation",
+			"item": [
+				{
+					"name": "gettodaysprepartionlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"487\",\r\n    \"period\": \"Day\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/gettodaysprepartionlist",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"gettodaysprepartionlist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Today's Deliveries",
+			"item": [
+				{
+					"name": "gettodaysdeliverylist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"487\",\r\n    \"package_id\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/gettodaysdeliverylist",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"gettodaysdeliverylist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDietBookingDetailsByIdfortodayorder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietBookingId\": 233,\r\n    \"isRevenue\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getDietBookingDetailsByIdfortodayorder",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getDietBookingDetailsByIdfortodayorder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upcoming Orders",
+			"item": [
+				{
+					"name": "getAdvancedFilterPackageList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"487\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getAdvancedFilterPackageList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getAdvancedFilterPackageList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPendingDietOrderList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"487\",\r\n    \"fromDate\": \"\",\r\n    \"toDate\": \"\",\r\n    \"package_id\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getPendingDietOrderList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getPendingDietOrderList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Active Orders",
+			"item": [
+				{
+					"name": "getInProgressDietOrderList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"487\",\r\n    \"package_id\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getInProgressDietOrderList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getInProgressDietOrderList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAdvancedFilterPackageList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"487\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getAdvancedFilterPackageList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getAdvancedFilterPackageList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Completed Orders",
+			"item": [
+				{
+					"name": "getCompletedDietOrderList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"487\",\r\n    \"fromDate\": \"\",\r\n    \"toDate\": \"\",\r\n    \"package_id\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getCompletedDietOrderList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getCompletedDietOrderList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAdvancedFilterPackageList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"487\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getAdvancedFilterPackageList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getAdvancedFilterPackageList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Total Orders",
+			"item": [
+				{
+					"name": "gettotaldietorderlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"487\",\r\n    \"fromDate\": \"\",\r\n    \"toDate\": \"\",\r\n    \"period\": \"Day\",\r\n    \"package_id\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/gettotaldietorderlist",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"gettotaldietorderlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAdvancedFilterPackageList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"487\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getAdvancedFilterPackageList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getAdvancedFilterPackageList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "Dietdashboard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": \"487\",\r\n    \"from_date\": \"2024-12-04\",\r\n    \"to_date\": \"2024-12-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/Dietdashboard",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"Dietdashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Diet Walkin",
+			"item": [
+				{
+					"name": "getDietMemberName",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobile_no\": \"86109648\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getDietMemberName",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getDietMemberName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertDientWalkInSendLink",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\": \"8610964898\",\r\n    \"name\": \"Adithya \",\r\n    \"email\": \"adithya@avelator.com\",\r\n    \"vendor_id\": \"487\",\r\n    \"patient_id\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/insertDientWalkInSendLink",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"insertDientWalkInSendLink"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Member Diet",
+			"item": [
+				{
+					"name": "get_current_advertisement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_type_id\": 8,\r\n    \"current_date\": \"2024-12-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/get_current_advertisement",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"get_current_advertisement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getdietcompanylist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Searchcontent\": false,\r\n    \"dietcompanyName\": null,\r\n    \"currentDate\": \"2024-12-04\",\r\n    \"offerBasedSorting\": false,\r\n    \"offerBasedSortingOrder\": \"ASC\",\r\n    \"ratingBasedSortingOrder\": \"ASC\",\r\n    \"limit\": 5,\r\n    \"pageno\": 1,\r\n    \"patientId\": \"10\",\r\n    \"lattidue\": 13.0885868,\r\n    \"langtitude\": 80.1951515\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/getdietcompanylist",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"getdietcompanylist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getParticularCompanydietplan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dietvendorId\": 487,\r\n    \"currentDate\": \"2024-12-04\",\r\n    \"patientId\": \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/getParticularCompanydietplan",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"getParticularCompanydietplan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMasterMenus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": 487,\r\n    \"module\": \"MasterMenu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getMasterMenus",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getMasterMenus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMediaDetailsByDoctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"doctorId\": 487,\r\n    \"limit\": 1000,\r\n    \"pageno\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/getMediaDetailsByDoctor",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"getMediaDetailsByDoctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMasterMenuItemList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": 487,\r\n    \"module\": \"managepackage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getMasterMenuItemList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getMasterMenuItemList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDietManagePackageListMember",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": 487\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getDietManagePackageListMember",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getDietManagePackageListMember"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDietPackageDetailsList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"duration_id\": \"235\",\r\n    \"vendor_id\": 487,\r\n    \"from\": \"alldata\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getDietPackageDetailsList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getDietPackageDetailsList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPackageGeneralDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"package_id\": 145,\r\n    \"from\": \"Activepackage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getPackageGeneralDetails",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getPackageGeneralDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDietPacakgeDetailsMenuList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail_id\": 297,\r\n    \"package_id\": 145,\r\n    \"modulefrom\": \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Diet/getDietPacakgeDetailsMenuList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Diet",
+								"getDietPacakgeDetailsMenuList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getClickMemberExpainervideo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendorid\": \"8\",\r\n    \"menuid\": \"28\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/getClickMemberExpainervideo",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"getClickMemberExpainervideo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPatientProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": \"10\",\r\n    \"currentDate\": \"2024-12-04\",\r\n    \"currentTime\": \"19:51:34\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/getPatientProfile",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"getPatientProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "decryptedMemberContent_data?vendorcategory=Diet",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/decryptedMemberContent_data?vendorcategory=Diet",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"decryptedMemberContent_data"
+							],
+							"query": [
+								{
+									"key": "vendorcategory",
+									"value": "Diet"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createSessionId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": \"450.000\",\r\n    \"customer_email\": \"adithya@avelator.com\",\r\n    \"full_name\": \"Adithya \",\r\n    \"customer_phone\": \"8610964898\",\r\n    \"OrderId\": \"tom348re16t46\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/createSessionId",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"createSessionId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertdietbooking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"heightcm\": 0,\r\n    \"height_unit\": \"cm\",\r\n    \"weightkg\": 0,\r\n    \"weight_unit\": \"kg\",\r\n    \"goal_weight\": null,\r\n    \"goal_weight_unit\": \"kg\",\r\n    \"bmi\": 0,\r\n    \"intake_calsday\": 512,\r\n    \"durationdays\": \"25\",\r\n    \"anymedication\": null,\r\n    \"anydisease\": null,\r\n    \"anysurgery\": null,\r\n    \"anygoals\": \"no\",\r\n    \"patientId\": \"10\",\r\n    \"diet_vendor_id\": 487,\r\n    \"diet_package_id\": 145,\r\n    \"from_date\": \"2024-12-06\",\r\n    \"to_date\": \"2025-01-03\",\r\n    \"amount\": 450,\r\n    \"payment_status\": \"1\",\r\n    \"cancel_status\": \"0\",\r\n    \"delivery_address\": \"yuyuyuyyu\",\r\n    \"menuitem\": [\r\n        {\r\n            \"diet_menu_item_id\": 608,\r\n            \"diet_menu_id\": 1,\r\n            \"diet_day_id\": 5,\r\n            \"diet_week_id\": 1,\r\n            \"dates\": \"2024-12-06\",\r\n            \"is_active\": \"1\"\r\n        },\r\n        {\r\n            \"diet_menu_item_id\": 609,\r\n            \"diet_menu_id\": 1,\r\n            \"diet_day_id\": 6,\r\n            \"diet_week_id\": 1,\r\n            \"dates\": \"2024-12-07\",\r\n            \"is_active\": \"1\"\r\n        },\r\n        {\r\n            \"diet_menu_item_id\": 608,\r\n            \"diet_menu_id\": 1,\r\n            \"diet_day_id\": 0,\r\n            \"diet_week_id\": 2,\r\n            \"dates\": \"2024-12-08\",\r\n            \"is_active\": \"1\"\r\n        },\r\n        {\r\n            \"diet_menu_item_id\": 608,\r\n            \"diet_menu_id\": 1,\r\n            \"diet_day_id\": 1,\r\n            \"diet_week_id\": 2,\r\n            \"dates\": \"2024-12-09\",\r\n            \"is_active\": \"1\"\r\n        },\r\n        {\r\n            \"diet_menu_item_id\": 608,\r\n            \"diet_menu_id\": 1,\r\n            \"diet_day_id\": 2,\r\n            \"diet_week_id\": 2,\r\n            \"dates\": \"2024-12-10\",\r\n            \"is_active\": \"1\"\r\n        },\r\n        {\r\n            \"diet_menu_item_id\": 608,\r\n            \"diet_menu_id\": 1,\r\n            \"diet_day_id\": 5,\r\n            \"diet_week_id\": 2,\r\n            \"dates\": \"2024-12-13\",\r\n            \"is_active\": \"1\"\r\n        }\r\n    ],\r\n    \"selecteddays\": 6,\r\n    \"paymentid\": \"4ca28a96be8c46be\",\r\n    \"referenceid\": \"ab55abbd09\",\r\n    \"order_id\": \"tomo9y402kb1n\",\r\n    \"paymentGateway\": \"MASTER CARD\",\r\n    \"billing_amount\": 450,\r\n    \"deal_amount\": 0,\r\n    \"deal_option\": \"Nodeal\",\r\n    \"bookedDate\": \"2024-12-4 21:14:16\",\r\n    \"cheat_days\": \"Thu\",\r\n    \"delivery_contact_no\": \"8610964898\",\r\n    \"package_duration_id\": \"233\",\r\n    \"package_duration_detail_id\": 295,\r\n    \"delivery_time_id\": 322,\r\n    \"delivery_instruction\": \"hjhjhjhjhjhjhj\",\r\n    \"is_save_later\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/insertdietbooking",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"insertdietbooking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "knetPaymentTransactions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paymentid\": \"100433910000019345\",\r\n    \"result\": \"CAPTURED\",\r\n    \"auth\": \"B85890\",\r\n    \"avr\": \"N\",\r\n    \"ref\": \"433910001371\",\r\n    \"tranid\": \"433910001305646\",\r\n    \"postdate\": \"1205\",\r\n    \"trackid\": \"bkevoo9g95uozoy5q3fh\",\r\n    \"udf1\": \"\",\r\n    \"udf2\": \"adithya@avelator.com\",\r\n    \"udf3\": \"8610964898\",\r\n    \"udf4\": \"Test4\",\r\n    \"udf5\": \"bkevoo9g95uozoy5q3fh\",\r\n    \"amt\": \"100.000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/knetPaymentTransactions",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"knetPaymentTransactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "knetPaymentSuccessDetailsMail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paymentid\": \"100433910000019345\",\r\n    \"dateTime\": \"04-12-2024 21:28:42\",\r\n    \"transactionid\": \"433910001305646\",\r\n    \"title\": \"Knet Payment Success Details\",\r\n    \"username\": \"\",\r\n    \"email\": \"adithya@avelator.com\",\r\n    \"amount\": \"100.000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/admin/knetPaymentSuccessDetailsMail",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"admin",
+								"knetPaymentSuccessDetailsMail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patientBookedAppointmentList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": \"10\",\r\n    \"currentDate\": \"2024-12-04\",\r\n    \"current_time\": \"21:33:18\",\r\n    \"pageno\": 1,\r\n    \"limit\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/patientBookedAppointmentList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"patientBookedAppointmentList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getdietbookinglist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": \"10\",\r\n    \"limit\": \"10\",\r\n    \"pageno\": 1,\r\n    \"filter\": false,\r\n    \"modeId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/getdietbookinglist",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"getdietbookinglist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDietBookingById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"booking_id\": 260\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/getDietBookingById",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"getDietBookingById"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatedietbooking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"booking_id\": 260,\r\n    \"patient_id\": \"10\",\r\n    \"vendor_id\": 487,\r\n    \"package_id\": 145,\r\n    \"menuitem\": [\r\n        {\r\n            \"diet_menu_item_id\": 591,\r\n            \"diet_menu_id\": 1,\r\n            \"diet_day_id\": 5,\r\n            \"diet_week_id\": 1,\r\n            \"dates\": \"2024-12-06\",\r\n            \"is_active\": \"1\"\r\n        },\r\n        {\r\n            \"diet_menu_item_id\": 600,\r\n            \"diet_menu_id\": 1,\r\n            \"diet_day_id\": 6,\r\n            \"diet_week_id\": 1,\r\n            \"dates\": \"2024-12-07\",\r\n            \"is_active\": \"1\"\r\n        }\r\n    ],\r\n    \"intake_calsday\": 284,\r\n    \"is_save_later\": 1,\r\n    \"selecteddays\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/updatedietbooking",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"updatedietbooking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMemberNotifications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"memberId\": \"10\",\r\n    \"moduleId\": \"8\",\r\n    \"notificationDate\": \"2024-12-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/getMemberNotifications",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"getMemberNotifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patientBookedAppointmentHistoryList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": \"10\",\r\n    \"currentDate\": \"2024-12-04 21:48:19\",\r\n    \"pageno\": 1,\r\n    \"limit\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/patientBookedAppointmentHistoryList",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"patientBookedAppointmentHistoryList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getdietbookinghistory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": \"10\",\r\n    \"limit\": \"10\",\r\n    \"pageno\": 1,\r\n    \"filter\": false,\r\n    \"modeId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/getdietbookinghistory",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"getdietbookinghistory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateVendorReview",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendorId\": 487,\r\n    \"vendor_type_id\": 8,\r\n    \"patientId\": \"10\",\r\n    \"value\": 4,\r\n    \"remarks\": \"sasasa\",\r\n    \"bookingId\": 226,\r\n    \"module_name\": \"Diet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gateway.stage.theonemoment.co/Patient/updateVendorReview",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"stage",
+								"theonemoment",
+								"co"
+							],
+							"path": [
+								"Patient",
+								"updateVendorReview"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
